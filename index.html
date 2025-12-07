@@ -109,14 +109,23 @@
       margin-bottom: 40px;
     }
 
-    @media (max-width: 840px) {
-      header.hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .page {
-        padding-top: 80px; /* room for the fixed header on mobile */
-      }
-    }
+@media (max-width: 840px) {
+  /* Header logo: don't float on mobile */
+  .site-branding {
+    position: static;     /* no longer fixed */
+    padding: 16px 0 0;    /* small top spacing */
+  }
+
+  /* Normal top padding again since logo isn't fixed */
+  .page {
+    padding-top: 24px;
+  }
+
+  /* Stack hero columns */
+  header.hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 
     .pill {
       display: inline-flex;
