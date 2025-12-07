@@ -39,10 +39,17 @@
 }
 
 .brand {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: -0.3px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+    .brand-icon {
+    width: 22px;
+    height: 22px;
 }
 
     body {
@@ -335,7 +342,10 @@
 </head>
 <body>
 <header class="site-branding">
-  <div class="brand">Recoverly</div>
+<div class="brand">
+    <img src="favicon.png" class="brand-icon" alt="Recoverly logo">
+    Recoverly
+</div>
 </header>
   <div class="page">
     <main class="shell">
