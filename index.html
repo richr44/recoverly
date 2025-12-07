@@ -40,6 +40,13 @@
   z-index: 20;
 }
 
+.site-branding {
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  z-index: 20;
+}
+
 .brand {
     font-size: 20px;
     font-weight: 600;
@@ -49,16 +56,20 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    padding: 14px 0;       /* improved header spacing */
+    padding: 14px 0;
 }
+
 .brand:hover {
-    opacity: 0.75;         /* subtle polish */
+    opacity: 0.75;
     cursor: pointer;
 }
-.brand-icon {
-    width: 22px;           /* correct expert size */
+
+.brand-mark {
+    width: 22px;
     height: 22px;
-}
+    border-radius: 6px;
+}    
+    
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
