@@ -33,6 +33,7 @@
     * {
       box-sizing: border-box;
     }
+
 .site-branding {
   position: fixed;
   top: 24px;
@@ -61,7 +62,14 @@
     width: 22px;
     height: 22px;
     border-radius: 6px;
-}    
+}
+
+/* ✅ Disable clicking for “Coming soon on the App Store” CTA */
+.coming-soon {
+    cursor: default !important;
+    opacity: 1;
+    pointer-events: none;
+} 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
@@ -385,9 +393,9 @@
           </div>
 
           <div class="cta-row">
-            <button class="btn-primary" type="button">
-              Coming soon on the App Store
-              <span class="sub">Not yet available</span>
+            <button class="cta-primary coming-soon" disabled>
+            Coming soon on the App Store
+            <span class="note">Not yet available</span>
             </button>
 
             <a class="btn-ghost" href="mailto:getrecoverly@gmail.com">
