@@ -45,13 +45,18 @@
     letter-spacing: -0.3px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    text-decoration: none;
+    padding: 12px 0;       /* improved header spacing */
 }
-    .brand-icon {
-    width: 22px;
+.brand:hover {
+    opacity: 0.75;         /* subtle polish */
+    cursor: pointer;
+}
+.brand-icon {
+    width: 22px;           /* correct expert size */
     height: 22px;
 }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
@@ -342,10 +347,10 @@
 </head>
 <body>
 <header class="site-branding">
-<div class="brand">
+<a href="/" class="brand">
     <img src="favicon.png" class="brand-icon" alt="Recoverly logo">
     Recoverly
-</div>
+</a>
 </header>
   <div class="page">
     <main class="shell">
