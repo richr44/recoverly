@@ -34,42 +34,47 @@
       box-sizing: border-box;
     }
 
-.site-branding {
-  position: fixed;
-  top: 24px;
-  left: 32px;
-  z-index: 20;
-}
+    /* Header / branding */
 
-.brand {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--text-main);   /* recommended */
-    letter-spacing: -0.3px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    padding: 14px 0;
-}
+    .site-branding {
+      position: fixed;
+      top: 24px;
+      left: 32px;
+      z-index: 20;
+    }
 
-.brand:hover {
-    opacity: 0.75;
-    cursor: pointer;
-}
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 0;
+      text-decoration: none;
+    }
 
-.brand-mark {
-    width: 22px;
-    height: 22px;
-    border-radius: 6px;
-}
+    .brand-link:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
 
-/* ✅ Disable clicking for “Coming soon on the App Store” CTA */
-.coming-soon {
-    cursor: default !important;
-    opacity: 1;
-    pointer-events: none;
-} 
+    .brand {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+    }
+
+    .brand-mark {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+    }
+
+    /* Disable clicking for “Coming soon on the App Store” CTA */
+    .coming-soon {
+      pointer-events: none;
+      cursor: default;
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
@@ -109,7 +114,7 @@
         grid-template-columns: minmax(0, 1fr);
       }
       .page {
-       padding-top: 80px;
+        padding-top: 80px; /* room for the fixed header on mobile */
       }
     }
 
@@ -203,7 +208,7 @@
       box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
     }
 
-    .btn-primary span.sub {
+    .btn-primary .sub {
       font-size: 12px;
       font-weight: 500;
       opacity: 0.9;
@@ -359,12 +364,13 @@
   </style>
 </head>
 <body>
-<header class="site-branding">
-<a href="./" class="brand-link">
-  <img src="favicon.png" alt="" class="brand-mark" />
-  <span class="brand">Recoverly</span>
-</a>
-</header>
+  <header class="site-branding">
+    <a href="./" class="brand-link">
+      <img src="favicon.png" alt="" class="brand-mark" />
+      <span class="brand">Recoverly</span>
+    </a>
+  </header>
+
   <div class="page">
     <main class="shell">
       <header class="hero">
@@ -393,9 +399,9 @@
           </div>
 
           <div class="cta-row">
-            <button class="cta-primary coming-soon" disabled>
-            Coming soon on the App Store
-            <span class="note">Not yet available</span>
+            <button class="btn-primary coming-soon" type="button">
+              Coming soon on the App Store
+              <span class="sub">Not yet available</span>
             </button>
 
             <a class="btn-ghost" href="mailto:getrecoverly@gmail.com">
