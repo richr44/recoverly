@@ -109,23 +109,23 @@
       margin-bottom: 40px;
     }
 
-@media (max-width: 840px) {
-  /* Header logo: don't float on mobile */
-  .site-branding {
-    position: static;     /* no longer fixed */
-    padding: 16px 0 0;    /* small top spacing */
-  }
+    @media (max-width: 840px) {
+      /* Header logo: don't float on mobile */
+      .site-branding {
+        position: static;
+        padding: 16px 0 0;
+      }
 
-  /* Normal top padding again since logo isn't fixed */
-  .page {
-    padding-top: 24px;
-  }
+      /* Normal top padding again since logo isn't fixed */
+      .page {
+        padding-top: 24px;
+      }
 
-  /* Stack hero columns */
-  header.hero {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
+      /* Stack hero columns */
+      header.hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
 
     .pill {
       display: inline-flex;
@@ -166,6 +166,14 @@
       color: var(--text-muted);
       max-width: 34rem;
       margin-bottom: 16px;
+    }
+
+    .subtle-note {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 10px;
     }
 
     .hero-meta {
@@ -389,46 +397,47 @@
             <span class="pill-dot"></span>
             Built for spine & nerve recovery
           </div>
-<h1>Recovery you can <strong>see</strong> — so you’re not relying on memory alone.</h1>
 
-<p class="subtle-note">
-    Recoverly doesn’t define what’s medically normal — it simply helps you understand how <em>your own</em> symptoms change over time.
-</p>
+          <h1>Recovery you can <strong>see</strong> — so you’re not relying on memory alone.</h1>
 
-<p>
-    Recoverly helps you track back pain, leg nerve symptoms, and daily activity so you can clearly see how your recovery changes over time.
-</p>
+          <p class="subtle-note">
+            Recoverly doesn’t define what’s medically normal — it simply helps you understand how <em>your own</em> symptoms change over time.
+          </p>
 
-<div class="hero-meta">
-  <span class="badge">Post-surgery friendly</span>
-  <span class="badge">No account required</span>
-  <span>Designed by a real spine-surgery patient.</span>
-</div>
+          <p>
+            Recoverly helps you track back pain, leg nerve symptoms, and daily activity so you can clearly see how your recovery changes over time.
+          </p>
 
-<!-- 👇 New personal story line -->
-<p class="subtle-note">
-    I’m Rich, and I built Recoverly after my own lumbar spine surgery, when I kept forgetting which days were actually better or worse.
-</p>
+          <div class="hero-meta">
+            <span class="badge">Post-surgery friendly</span>
+            <span class="badge">No account required</span>
+            <span>Designed by a real spine-surgery patient.</span>
+          </div>
 
-<div class="cta-row">
-  <button class="btn-primary coming-soon" type="button">
-    Coming soon on the App Store
-    <span class="sub">Not yet available</span>
-  </button>
+          <!-- Personal story line -->
+          <p class="subtle-note">
+            I’m Rich, and I built Recoverly after my own lumbar spine surgery, when I kept forgetting which days were actually better or worse.
+          </p>
 
-  <a class="btn-ghost" href="mailto:getrecoverly@gmail.com">
-    Contact us
-  </a>
-</div>
+          <div class="cta-row">
+            <button class="btn-primary coming-soon" type="button">
+              Coming soon on the App Store
+              <span class="sub">Not yet available</span>
+            </button>
 
-<p class="note-text">Questions or feedback? Reach out anytime.</p>
+            <a class="btn-ghost" href="mailto:getrecoverly@gmail.com">
+              Contact us
+            </a>
+          </div>
 
-<p class="note-text">
-  Recoverly doesn’t replace your surgeon or physical therapist. It’s
-  a tool to help you remember the details and see how your symptoms and activity are
-  trending between visits.
-</p>
-          
+          <p class="note-text">Questions or feedback? Reach out anytime.</p>
+
+          <p class="note-text">
+            Recoverly doesn’t replace your surgeon or physical therapist. It’s
+            a tool to help you remember the details and see how your symptoms and activity are
+            trending between visits.
+          </p>
+        </div>
 
         <!-- Right side: Why Recoverly -->
         <aside class="card">
@@ -501,7 +510,7 @@
           <h3>Share a clean report</h3>
           <h2>Bring your care team into the picture.</h2>
           <p>
-           When you’re ready for a follow-up, Recoverly creates a clean PDF summary you can share with your care team.
+            When you’re ready for a follow-up, Recoverly creates a clean PDF summary you can share with your care team.
           </p>
           <ul class="list-check">
             <li>
@@ -529,7 +538,7 @@
       <section class="screens" id="screenshots">
         <h2>Preview Recoverly</h2>
         <p>
-        A preview of key screens you’ll use during recovery. Exact screens may
+          A preview of key screens you’ll use during recovery. Exact screens may
           change slightly as we improve the app.
         </p>
 
