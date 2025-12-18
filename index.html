@@ -82,12 +82,6 @@
       border-radius: 6px;
     }
 
-    /* Disable clicking for “Coming soon on the App Store” CTA */
-    .coming-soon {
-      pointer-events: none;
-      cursor: default;
-    }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
@@ -452,16 +446,21 @@
 
 
 
-          <div class="cta-row">
-            <button class="btn-primary coming-soon" type="button">
-              Coming soon on the App Store
-              <span class="sub">Not yet available</span>
-            </button>
+<div class="cta-row">
+  <a
+    class="btn-primary"
+    href="https://apps.apple.com/us/app/recoverly-recovery-tracker/id6756222251"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Download on the App Store
+    <span class="sub">Available now</span>
+  </a>
 
-            <a class="btn-ghost" href="mailto:getrecoverly@gmail.com">
-              Contact us
-            </a>
-          </div>
+  <a class="btn-ghost" href="mailto:getrecoverly@gmail.com">
+    Contact us
+  </a>
+</div>
 
           <p class="note-text">Questions or feedback? Reach out anytime.</p>
 
