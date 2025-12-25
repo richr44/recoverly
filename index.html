@@ -346,21 +346,26 @@
     }
 
     .screen-card {
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
-      border-radius: 18px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 10px;
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.85);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 10px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;     /* center image + caption horizontally */
+  text-align: center;      /* center the caption text */
+}
 
-    .screen-card img {
-      width: 100%;
-      border-radius: 14px;
-      display: block;
-    }
+.screen-card img {
+  width: 100%;
+  max-width: 260px;        /* consistent phone width */
+  aspect-ratio: 9 / 19.5;  /* consistent tall-phone shape */
+  object-fit: contain;     /* keep whole screenshot visible */
+  border-radius: 14px;
+  display: block;
+}
 
     .screen-card span {
       font-size: 12px;
@@ -580,33 +585,33 @@
         </article>
       </section>
 
-      <!-- Screenshots -->
-      <section class="screens" id="screenshots">
-        <h2>Preview Recoverly</h2>
-        <p>
-          A preview of key screens you’ll use during recovery. Exact screens may
-          change slightly as we improve the app.
-        </p>
+<!-- Screenshots -->
+<section class="screens" id="screenshots">
+  <h2>Preview Recoverly</h2>
+  <p>
+    A preview of key screens you’ll use during recovery. Exact screens may
+    change slightly as we improve the app.
+  </p>
 
-        <div class="screen-grid">
-          <div class="screen-card">
-            <img src="screen-today.png" alt="Recoverly Today view" />
-            <span>Today — log pain, nerve symptoms, and activity in under a minute.</span>
-          </div>
-          <div class="screen-card">
-            <img src="screen-history.png" alt="Recoverly History view" />
-            <span>History — see how good and tough days line up on the calendar.</span>
-          </div>
-          <div class="screen-card">
-            <img src="screen-insights.png" alt="Recoverly Insights view" />
-            <span>Insights — clear weekly trends for pain, movement, and nerve symptoms.</span>
-          </div>
-          <div class="screen-card">
-            <img src="screen-report.png" alt="Recoverly PDF report preview" />
-            <span>PDF Report — share a clean summary with your surgeon or therapist.</span>
-          </div>
-        </div>
-      </section>
+  <div class="screen-grid">
+    <div class="screen-card">
+      <img class="preview-screenshot" src="screen-today.png" alt="Recoverly Today view" />
+      <span>Today — log pain, nerve symptoms, and activity in under a minute.</span>
+    </div>
+    <div class="screen-card">
+      <img class="preview-screenshot" src="screen-history.png" alt="Recoverly History view" />
+      <span>History — see how good and tough days line up on the calendar.</span>
+    </div>
+    <div class="screen-card">
+      <img class="preview-screenshot" src="screen-insights.png" alt="Recoverly Insights view" />
+      <span>Insights — clear weekly trends for pain, movement, and nerve symptoms.</span>
+    </div>
+    <div class="screen-card">
+      <img class="preview-screenshot" src="screen-report.png" alt="Recoverly PDF report preview" />
+      <span>PDF Report — share a clean summary with your surgeon or therapist.</span>
+    </div>
+  </div>
+</section></section>
 
       <footer>
         <span>© 2025 Rich Rabin. All rights reserved.</span>
