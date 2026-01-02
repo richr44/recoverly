@@ -11,19 +11,18 @@
         content="Recoverly helps you track back pain, leg nerve symptoms, and daily activity after lumbar or nerve surgery so you can understand your recovery and bring clear data to follow-up visits." />
   <meta name="keywords"
         content="Recoverly, spine surgery recovery, lumbar surgery, laminectomy, discectomy, nerve pain tracker, back pain app, surgery recovery app" />
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Recoverly — Spine & Nerve Recovery Tracker">
-  <meta property="og:description"
-        content="Recoverly helps you track back pain, leg nerve symptoms, and daily activity after lumbar or nerve surgery so you can understand your recovery and bring clear data to follow-up visits.">
-  <meta property="og:url" content="https://richr44.github.io/recoverly/">
-  <meta property="og:image" content="https://richr44.github.io/recoverly/og-image.png">
+<meta property="og:title" content="Recoverly — Spine & Nerve Recovery Tracker">
+<meta property="og:description"
+      content="Recoverly helps you track back pain, leg nerve symptoms, and daily activity after lumbar or nerve surgery so you can understand your recovery and bring clear data to follow-up visits.">
+<meta property="og:url" content="https://richr44.github.io/recoverly/">
+<meta property="og:image" content="https://richr44.github.io/recoverly/og-image.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Recoverly — Spine & Nerve Recovery Tracker">
-  <meta name="twitter:description"
-        content="Track back pain, leg nerve symptoms, and daily activity so you can clearly see how your recovery changes over time.">
-  <meta name="twitter:image" content="https://richr44.github.io/recoverly/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Recoverly — Spine & Nerve Recovery Tracker">
+<meta name="twitter:description"
+      content="Track back pain, leg nerve symptoms, and daily activity so you can clearly see how your recovery changes over time.">
+<meta name="twitter:image" content="https://richr44.github.io/recoverly/og-image.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -44,9 +43,12 @@
       --max-width: 1080px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     /* Header / branding */
+
     .site-branding {
       position: fixed;
       top: 24px;
@@ -62,7 +64,10 @@
       text-decoration: none;
     }
 
-    .brand-link:hover { opacity: 0.8; cursor: pointer; }
+    .brand-link:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
 
     .brand {
       font-size: 20px;
@@ -86,7 +91,10 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .page {
       min-height: 100vh;
@@ -100,60 +108,30 @@
       max-width: var(--max-width);
     }
 
-    /* HERO (existing) */
     header.hero {
       display: grid;
       grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
       gap: 32px;
       align-items: flex-start;
-      margin-bottom: 0; /* top-grid will control spacing now */
+      margin-bottom: 40px;
     }
 
     @media (max-width: 840px) {
+      /* Header logo: don't float on mobile */
       .site-branding {
         position: static;
         padding: 16px 0 0;
       }
 
-      .page { padding-top: 24px; }
+      /* Normal top padding again since logo isn't fixed */
+      .page {
+        padding-top: 24px;
+      }
 
+      /* Stack hero columns */
       header.hero {
         grid-template-columns: minmax(0, 1fr);
       }
-    }
-
-    /* ✅ NEW: Top layout wrapper that fills the right-side empty space */
-    .top-grid {
-      margin-bottom: 40px; /* replaces the old hero margin-bottom */
-    }
-
-    @media (min-width: 841px) {
-      .top-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-        grid-template-areas:
-          "hero-left hero-right"
-          "hero-left works";
-        gap: 32px;
-        align-items: start;
-      }
-
-      /* Place blocks into the grid */
-      .hero-left  { grid-area: hero-left; }
-      .hero-right { grid-area: hero-right; }
-      .works-card { grid-area: works; }
-
-      /* Make the hero itself stop acting like a 2-col container in this mode */
-      header.hero {
-        display: contents;
-        margin-bottom: 0;
-      }
-    }
-
-    /* Mobile: normal stacked flow */
-    @media (max-width: 840px) {
-      .top-grid { display: block; }
-      .works-card { margin-top: 16px; }
     }
 
     .pill {
@@ -185,7 +163,9 @@
       letter-spacing: -0.03em;
     }
 
-    h1 span.accent { color: var(--accent); }
+    h1 span.accent {
+      color: var(--accent);
+    }
 
     .tagline {
       font-size: 15px;
@@ -250,6 +230,13 @@
       background: linear-gradient(135deg, #3b82f6, #22c55e);
       color: #0b1020;
       box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+    }
+
+    .btn-primary .sub {
+      font-size: 12px;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-left: 6px;
     }
 
     .btn-ghost {
@@ -324,9 +311,15 @@
     }
 
     /* Screenshots */
-    section.screens { margin-top: 28px; }
 
-    section.screens h2 { font-size: 16px; margin-bottom: 8px; }
+    section.screens {
+      margin-top: 28px;
+    }
+
+    section.screens h2 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
 
     section.screens p {
       font-size: 13px;
@@ -341,32 +334,41 @@
     }
 
     @media (max-width: 960px) {
-      .screen-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .screen-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 600px) {
-      .screen-grid { grid-template-columns: minmax(0, 1fr); }
+      .screen-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
-    .screen-card {
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
-      border-radius: 18px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 10px;
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.85);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-    }
+.screen-card {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 10px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keep caption pinned to bottom */
+  gap: 8px;
+}
 
-    .screen-card img {
-      width: 100%;
-      aspect-ratio: 9 / 19.5;
-      object-fit: cover;
-      object-position: top;
-      border-radius: 14px;
-      display: block;
+.screen-card img {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;  /* force all screenshots to same shape */
+  object-fit: cover;       /* crop any extra instead of stretching */
+  object-position: top;    /* align cropping from the top */
+  border-radius: 14px;
+  display: block;
+}
+
+    .screen-card span {
+      font-size: 12px;
+      color: var(--text-muted);
     }
 
     footer {
@@ -388,24 +390,22 @@
       text-decoration-style: dotted;
     }
   </style>
-
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Recoverly",
-    "operatingSystem": "iOS",
-    "applicationCategory": "HealthApplication",
-    "description": "Recoverly is a simple recovery tracker for back and leg nerve symptoms after spine surgery. It helps you log pain, nerve symptoms, and daily activity so you can see clear trends between follow-up visits.",
-    "url": "https://richr44.github.io/recoverly/",
-    "creator": {
-      "@type": "Person",
-      "name": "Rich Rabin"
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Recoverly",
+  "operatingSystem": "iOS",
+  "applicationCategory": "HealthApplication",
+  "description": "Recoverly is a simple recovery tracker for back and leg nerve symptoms after spine surgery. It helps you log pain, nerve symptoms, and daily activity so you can see clear trends between follow-up visits.",
+  "url": "https://richr44.github.io/recoverly/",
+  "creator": {
+    "@type": "Person",
+    "name": "Rich Rabin"
   }
-  </script>
+}
+</script>
 </head>
-
 <body>
   <header class="site-branding">
     <a href="./" class="brand-link">
@@ -416,36 +416,115 @@
 
   <div class="page">
     <main class="shell">
-
-      <!-- ✅ Top area: hero + works card fills right column -->
-      <section class="top-grid">
-        <header class="hero">
-
-          <!-- HERO LEFT CONTENT -->
-          <div class="hero-left">
-            <!-- paste your real left-side hero markup here -->
-            ...
+      <header class="hero">
+        <!-- Left side: copy -->
+        <div>
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Built for spine & nerve recovery
           </div>
 
-          <!-- HERO RIGHT CONTENT -->
-          <aside class="card hero-right">
-            <!-- paste your real right-side card markup here -->
-            ...
-          </aside>
+          <h1>Recovery you can <strong>see</strong> — so you’re not relying on memory alone.</h1>
 
-        </header>
+          <p class="subtle-note">
+            Recoverly doesn’t define what’s medically normal — it simply helps you understand how
+            <em>your own</em> symptoms change over time.
+          </p>
 
-        <section class="card works-card" style="margin-bottom: 24px;">
-          <h3>How Recoverly works</h3>
-          <h2>A simple daily flow — built for real recovery.</h2>
+          <p>
+            Recoverly helps you track back pain, nerve symptoms, and daily activity — so you can clearly see how your recovery changes over time.
+          </p>
+
+          <div class="hero-meta">
+            <span class="badge">Post-surgery friendly</span>
+            <span class="badge">No account required</span>
+            <span>Designed by a real spine-surgery patient.</span>
+          </div>
+
+          <!-- Personal story line -->
+          <p class="subtle-note">
+            I’m Rich, and I built Recoverly after my own lumbar spine surgery, when I kept forgetting
+            which days were actually better or worse.
+          </p>
+
+          <p class="subtle-note">
+            No account, no cloud — your recovery data stays on your device unless you choose to export
+            a PDF.
+          </p>
+
+          
+          <div class="cta-row">
+            <a
+              class="btn-primary"
+              href="https://apps.apple.com/us/app/recoverly-recovery-tracker/id6756222251"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download on the App Store
+            </a>
+
+
+            <a class="btn-ghost" href="mailto:getrecoverly@gmail.com">
+              Contact us
+            </a>
+          </div>
+
+          <p class="note-text">Questions or feedback? Reach out anytime.</p>
+
+          <p class="note-text">
+            Recoverly doesn’t replace your surgeon or physical therapist. It’s a tool to help you
+            remember the details and see how your symptoms and activity are trending between visits.
+          </p>
+        </div>
+
+        <!-- Right side: Why Recoverly -->
+        <aside class="card">
+          <h3>Why Recoverly?</h3>
+          <h2>Turn hazy weeks into clear, understandable trends.</h2>
+          <p>
+            The first weeks after surgery blur together. Was today better than last Tuesday? Are
+            tingling and spasms easing up, or just moving around?
+          </p>
+          <p>
+            <strong>Best for:</strong> lumbar surgery, nerve decompression, fusion, or similar
+            back/nerve procedures.
+          </p>
+          <p>
+            Recoverly gives you a simple way to log each day and see those “I think so…” answers
+            become clear charts.
+          </p>
+
           <ul class="list-check">
-            <li><span class="icon">✔</span><span>Log your day once — pain, nerve symptoms, movement, and notes.</span></li>
-            <li><span class="icon">✔</span><span>See clearer patterns in History and Insights week over week.</span></li>
-            <li><span class="icon">✔</span><span>Export a clean PDF summary before follow-up visits.</span></li>
+            <li>
+              <span class="icon">✔</span>
+              <span>
+                Built around common lumbar and nerve symptoms: back pain, hip/glute pain, leg nerve
+                pain, tingling, and spasms.
+              </span>
+            </li>
+            <li>
+              <span class="icon">✔</span>
+              <span>
+                Track walking and sitting tolerance so you can see how activity changes week to week.
+              </span>
+            </li>
+            <li>
+              <span class="icon">✔</span>
+              <span>Designed to be used once a day in under a minute.</span>
+            </li>
           </ul>
-        </section>
-      </section>
-
+        </aside>
+      </header>
+    <section class="card" style="margin-bottom: 24px;">
+  <h3>How Recoverly works</h3>
+  <h2>A simple daily flow — built for real recovery.</h2>
+  <ul class="list-check">
+    <li><span class="icon">✔</span><span>Log your day once — pain, nerve symptoms, movement, and notes.</span></li>
+    <li><span class="icon">✔</span><span>See clearer patterns in History and Insights week over week.</span></li>
+    <li><span class="icon">✔</span><span>Export a clean PDF summary before follow-up visits.</span></li>
+  </ul>
+</section>
+      
       <!-- Two main cards -->
       <section class="card-grid">
         <article class="card">
@@ -456,50 +535,81 @@
             It simply gives you a way to:
           </p>
           <ul class="list-check">
-            <li><span class="icon">✔</span><span>See which days felt like “overdoing it” and what you did beforehand.</span></li>
-            <li><span class="icon">✔</span><span>Compare how back and nerve symptoms change versus last week.</span></li>
-            <li><span class="icon">✔</span><span>Watch walking and sitting trends over time.</span></li>
+            <li>
+              <span class="icon">✔</span>
+              <span>
+                See which days felt like “overdoing it” and what you did
+                beforehand.
+              </span>
+            </li>
+            <li>
+              <span class="icon">✔</span>
+              <span>
+                Compare how back and nerve symptoms change versus last week.
+              </span>
+            </li>
+            <li>
+              <span class="icon">✔</span>
+              <span>Watch walking and sitting trends over time.</span>
+            </li>
           </ul>
         </article>
 
-        <article class="card">
-          <h3>Share a clean report</h3>
-          <h2>Bring your care team into the picture.</h2>
-          <p>
-            When you’re ready for a follow-up, Recoverly creates a clean PDF summary you can share with your care team.
-            <strong>Full PDF reports are available with Recoverly Premium.</strong>
-          </p>
-          <ul class="list-check">
-            <li><span class="icon">✔</span><span>Weekly charts for pain, nerve symptoms, and activity.</span></li>
-            <li><span class="icon">✔</span><span>Plain-language summaries to review together.</span></li>
-            <li><span class="icon">✔</span><span>Designed for laminectomy, discectomy, fusion, and other lumbar procedures.</span></li>
-          </ul>
-        </article>
-      </section>
+<article class="card">
+  <h3>Share a clean report</h3>
+  <h2>Bring your care team into the picture.</h2>
+  <p>
+    When you’re ready for a follow-up, Recoverly creates a clean PDF summary you can share with your care team.
+    <strong>Full PDF reports are available with Recoverly Premium.</strong>
+  </p>
+  <ul class="list-check">
+    <li>
+      <span class="icon">✔</span>
+      <span>
+        Weekly charts for pain, nerve symptoms, and activity.
+      </span>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <span>Plain-language summaries to review together.</span>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <span>
+        Designed for laminectomy, discectomy, fusion, and other lumbar
+        procedures.
+      </span>
+    </li>
+  </ul>
+</article></section>
 
-      <!-- Screenshots -->
-      <section class="screens" id="screenshots">
-        <h2>Preview Recoverly</h2>
-        <p>
-          A preview of key screens you’ll use during recovery. Exact screens may
-          change slightly as we improve the app.
-        </p>
+<!-- Screenshots -->
+<section class="screens" id="screenshots">
+  <h2>Preview Recoverly</h2>
+  <p>
+    A preview of key screens you’ll use during recovery. Exact screens may
+    change slightly as we improve the app.
+  </p>
 
-        <div class="screen-grid">
-          <div class="screen-card">
-            <img class="preview-screenshot" src="screen-today.png" alt="Recoverly Today view" />
-          </div>
-          <div class="screen-card">
-            <img class="preview-screenshot" src="screen-history.png" alt="Recoverly History view" />
-          </div>
-          <div class="screen-card">
-            <img class="preview-screenshot" src="screen-insights.png" alt="Recoverly Insights view" />
-          </div>
-          <div class="screen-card">
-            <img class="preview-screenshot" src="screen-report.png" alt="Recoverly PDF report preview" />
-          </div>
-        </div>
-      </section>
+  <div class="screen-grid">
+    <div class="screen-card">
+      <img class="preview-screenshot" src="screen-today.png" alt="Recoverly Today view" />
+      <span>Today — log pain, nerve symptoms, and activity in under a minute.</span>
+    </div>
+    <div class="screen-card">
+      <img class="preview-screenshot" src="screen-history.png" alt="Recoverly History view" />
+      <span>History — see how good and tough days line up on the calendar.</span>
+    </div>
+    <div class="screen-card">
+      <img class="preview-screenshot" src="screen-insights.png" alt="Recoverly Insights view" />
+      <span>Insights — clear weekly trends for pain, movement, and nerve symptoms.</span>
+    </div>
+    <div class="screen-card">
+      <img class="preview-screenshot" src="screen-report.png" alt="Recoverly PDF report preview" />
+      <span>PDF Report — share a clean summary with your surgeon or therapist.</span>
+    </div>
+  </div>
+</section></section>
 
       <footer>
         <span>© 2025 Rich Rabin. All rights reserved.</span>
@@ -509,7 +619,6 @@
           </a>
         </span>
       </footer>
-
     </main>
   </div>
 </body>
