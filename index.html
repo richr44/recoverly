@@ -151,16 +151,36 @@ a{text-decoration:none;color:inherit}
 
 .screens{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:30px;
-  justify-items:center;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:28px;
+  margin-top:50px;
 }
 
-.screens img{
+.shot{
+  margin:0;
+}
+
+.shot img{
   width:100%;
-  max-width:260px;
-  border-radius:24px;
-  box-shadow:0 30px 60px rgba(0,0,0,.85);
+  border-radius:20px;
+  box-shadow:0 20px 45px rgba(0,0,0,.8);
+  display:block;
+}
+
+.shot figcaption{
+  margin-top:12px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.4;
+}
+
+.shot figcaption strong{
+  display:block;
+  color:var(--text);
+  font-weight:600;
+  font-size:13px;
+  margin-bottom:4px;
 }
 
 /* FOUNDER */
@@ -245,12 +265,41 @@ footer a{
 <section class="section">
   <h2>Preview Recoverly</h2>
 
-  <div class="screens">
-<img src="02-Daily Logging.jpg" alt="Daily Logging">
-<img src="01-Insights.jpg" alt="Insights">     
+<div class="screens">
+
+  <figure class="shot">
+    <img src="01-Insights.jpg" alt="Insights">
+    <figcaption>
+      <strong>Insights</strong>
+      Structured weekly comparisons.
+    </figcaption>
+  </figure>
+
+  <figure class="shot">
+    <img src="02-Daily Logging.jpg" alt="Daily Logging">
+    <figcaption>
+      <strong>Daily logging</strong>
+      Log your recovery in under a minute.
+    </figcaption>
+  </figure>
+
+  <figure class="shot">
     <img src="03-History.jpg" alt="History">
-    <img src="04-PDF.jpg" alt="PDF report preview">   
-  </div>
+    <figcaption>
+      <strong>History</strong>
+      Spot patterns across days and weeks.
+    </figcaption>
+  </figure>
+
+  <figure class="shot">
+    <img src="04-PDF.jpg" alt="PDF report preview">
+    <figcaption>
+      <strong>PDF report</strong>
+      Walk into appointments prepared.
+    </figcaption>
+  </figure>
+
+</div>
 </section>
 
 <section class="section founder">
