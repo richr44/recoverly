@@ -55,7 +55,8 @@ a{text-decoration:none;color:inherit}
   letter-spacing:-.04em;
   margin:0 0 18px;
 }
-      .hero-brand{
+
+.hero-brand{
   font-size:14px;
   letter-spacing:.12em;
   text-transform:uppercase;
@@ -82,16 +83,33 @@ a{text-decoration:none;color:inherit}
   box-shadow:0 18px 40px rgba(0,0,0,.6);
 }
 
+/* HERO SCREENSHOT */
+
+.hero-shot{
+  margin-top:60px;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-shot img{
+  width:640px;
+  max-width:100%;
+  border-radius:22px;
+  box-shadow:0 30px 80px rgba(0,0,0,.85);
+}
+
 /* SECTION */
 
 .section{
   padding:100px 0;
 }
+
 .section.screens-section{
   background:linear-gradient(180deg, rgba(14,19,32,.6), rgba(5,8,16,.8));
   border-radius:28px;
   padding:80px 40px;
 }
+
 .section:nth-of-type(even){
   background:rgba(255,255,255,.02);
 }
@@ -118,7 +136,7 @@ a{text-decoration:none;color:inherit}
   grid-template-columns:repeat(2, 1fr);
   gap:32px;
   max-width:900px;
-  margin:50px auto 0;   /* 👈 adds breathing room above */
+  margin:50px auto 0;
 }
 
 @media (max-width: 800px){
@@ -133,14 +151,13 @@ a{text-decoration:none;color:inherit}
   border-radius:22px;
   border:1px solid rgba(255,255,255,.06);
   box-shadow:0 25px 60px rgba(0,0,0,.65);
-      text-align: left;
+  text-align:left;
 }
 
 .card h3{
   margin:0 0 10px 0;
   font-size:1.05rem;
   line-height:1.25;
-      text-align: left;
 }
 
 .card p{
@@ -148,27 +165,27 @@ a{text-decoration:none;color:inherit}
   color:var(--muted);
   font-size:15px;
   line-height:1.6;
-      text-align: left;
 }
 
 /* SCREENSHOTS */
 
 .screens{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:28px;
   margin-top:50px;
 }
 
-.shot{
-  margin:0;
+@media (max-width:900px){
+  .screens{
+    grid-template-columns:1fr;
+  }
 }
 
 .shot img{
   width:100%;
   border-radius:20px;
   box-shadow:0 20px 45px rgba(0,0,0,.8);
-  display:block;
 }
 
 .shot figcaption{
@@ -228,22 +245,32 @@ footer a{
 
 <section class="hero">
   <div class="hero-brand">Recoverly – Spine Recovery</div>
+
   <h1>Structured weekly trends for spine recovery.</h1>
+
   <p>
     Track symptoms, nerve activity, and movement — and see clear week-over-week comparisons instead of guessing how your week has been.
   </p>
+
   <a class="cta" href="https://apps.apple.com/us/app/recoverly-recovery-tracker/id6756222251" target="_blank">
     Download on the App Store
   </a>
+
+  <div class="hero-shot">
+    <img src="01-Insights.jpg" alt="Recoverly insights screen showing weekly recovery trends">
+  </div>
+
 </section>
 
 <section class="section">
   <h2>See progress clearly — not just daily logs.</h2>
+
   <p>
     Recoverly turns daily entries into structured weekly insights you can actually use.
   </p>
 
   <div class="features">
+
     <div class="card">
       <h3>Log once per day</h3>
       <p>Track pain, nerve symptoms, walking, sitting tolerance, and notes in under a minute.</p>
@@ -263,55 +290,52 @@ footer a{
       <h3>Generate PDF summaries</h3>
       <p>Create appointment-ready reports with structured charts and trend interpretations.</p>
     </div>
+
   </div>
 </section>
 
 <section class="section screens-section">
-  <h2>Preview Recoverly</h2>
 
-<div class="screens">
+  <h2>How Recoverly Works</h2>
 
-  <figure class="shot">
-    <img src="01-Insights.jpg" alt="Insights">
-    <figcaption>
-      <strong>Insights</strong>
-      Structured weekly comparisons.
-    </figcaption>
-  </figure>
+  <div class="screens">
 
-  <figure class="shot">
-    <img src="02-Daily Logging.jpg" alt="Daily Logging">
-    <figcaption>
-      <strong>Daily logging</strong>
-      Log your recovery in under a minute.
-    </figcaption>
-  </figure>
+    <figure class="shot">
+      <img src="02-Daily Logging.jpg" alt="Daily logging screen">
+      <figcaption>
+        <strong>Daily logging</strong>
+        Log your recovery in under a minute.
+      </figcaption>
+    </figure>
 
-  <figure class="shot">
-    <img src="03-History.jpg" alt="History">
-    <figcaption>
-      <strong>History</strong>
-      Spot patterns across days and weeks.
-    </figcaption>
-  </figure>
+    <figure class="shot">
+      <img src="03-History.jpg" alt="History screen">
+      <figcaption>
+        <strong>History</strong>
+        Spot patterns across days and weeks.
+      </figcaption>
+    </figure>
 
-  <figure class="shot">
-    <img src="04-PDF.jpg" alt="PDF report preview">
-    <figcaption>
-      <strong>PDF report</strong>
-      Walk into appointments prepared.
-    </figcaption>
-  </figure>
+    <figure class="shot">
+      <img src="04-PDF.jpg" alt="PDF report preview">
+      <figcaption>
+        <strong>PDF report</strong>
+        Walk into appointments prepared.
+      </figcaption>
+    </figure>
 
-</div>
+  </div>
+
 </section>
 
 <section class="section founder">
   <h2>Built from real spine recovery.</h2>
+
   <p>
     Recoverly was created by a spine surgery patient who needed a clearer way to
     track progress between follow-up appointments.
   </p>
+
   <p>
     It’s grounded in lived experience — but built with structure and discipline
     so anyone recovering from lumbar, cervical, or other spine procedures can use it confidently.
@@ -320,13 +344,14 @@ footer a{
 
 <section class="section">
   <h2>Your data stays on your device.</h2>
+
   <p>
     No account. No cloud storage. Recoverly stores your data locally unless you choose to export a PDF.
   </p>
 </section>
 
 <footer>
-  © 2026 Rich Rabin · 
+  © 2026 Rich Rabin ·
   <a href="https://richr44.github.io/recoverly-privacy/" target="_blank">Privacy Policy</a>
 </footer>
 
