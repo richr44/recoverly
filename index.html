@@ -94,11 +94,17 @@ a{text-decoration:none;color:inherit}
   justify-content:center;
 }
 
-.hero-shot img{
-  width:420px;
+.hero-shot-frame{
+  width:460px;
   max-width:90%;
+  height:520px;
+  overflow:hidden;
   border-radius:22px;
   box-shadow:0 30px 80px rgba(0,0,0,.85);
+}
+
+.hero-shot-frame img{
+  width:100%;
   display:block;
 }
 
@@ -161,6 +167,10 @@ a{text-decoration:none;color:inherit}
 @media (max-width:900px){
   .screens{
     grid-template-columns:1fr;
+  }
+
+  .hero-shot-frame{
+    height:460px;
   }
 }
 
@@ -267,7 +277,9 @@ footer a{
   </a>
 
   <div class="hero-shot">
-    <img src="01-Insights-Hero.png" alt="Recoverly insights screen showing weekly recovery trends">
+    <div class="hero-shot-frame">
+      <img src="01-Insights-Hero.png" alt="Recoverly insights screen showing weekly recovery trends">
+    </div>
   </div>
 </section>
 
